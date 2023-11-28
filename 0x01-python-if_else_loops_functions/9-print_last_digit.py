@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-def print_first_digit(number):
-    if number < 0:
-        first_digit = int(str(-number)[0])
-    elif number >= 0:
-        first_digit = int(str(number)[0])
-    print("{:d}".format(first_digit), end="")
-    return first_digit
+def print_last_digit(number):
+    number = abs(number)
+    last_digit = number % 10
+    print(last_digit)
+    return last_digit
