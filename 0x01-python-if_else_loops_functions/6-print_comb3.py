@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(i + 1, 10):
-        if i != j:
-            separator = ", " if (i < 8 or (i == 8 and j == 9)) else ""
-            print("{:d}{:d}".format(i, j), end=separator)
-print()  # Add a newline after the loops to match the expected output
+for tens_digit in range(9):
+    for ones_digit in range(tens_digit + 1, 10):
+        if tens_digit * 10 + ones_digit < 89:
+            print("{:d}{:d}".format(tens_digit, ones_digit), end=", ")
+print("{:d}".format(89))
