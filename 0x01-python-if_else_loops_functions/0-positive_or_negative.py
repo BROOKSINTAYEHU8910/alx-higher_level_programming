@@ -5,12 +5,13 @@ import random
 number = random.randint(-10, 10)
 
 # Print the assigned number
-print("The number is:", number)
+print(f"The number is: {number}")
 
 # Check if the number is positive, negative, or zero, and print the corresponding message
 if number > 0:
-    print("The number is positive")
+    print(f"Correct output - {number} is positive")
 elif number == 0:
-    print("The number is zero")
+    print(f"Correct output - {number} is zero")
 else:
-    print("The number is negative")
+    print(f"Correct output - {number} is negative")
+
