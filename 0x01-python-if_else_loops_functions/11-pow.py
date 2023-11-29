@@ -9,4 +9,3 @@ def pow(a, b):
     # Recursive case: a^b = a * a^(b-1)
     else:
         return a * pow(a, b - 1)
-
