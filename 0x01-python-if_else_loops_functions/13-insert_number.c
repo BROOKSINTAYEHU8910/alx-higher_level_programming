@@ -10,19 +10,19 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-    // Create a new node
+    /* Create a new node */
     listint_t *current = *head;
     listint_t *newNode = malloc(sizeof(listint_t));
 
-    // Check if memory allocation for the new node failed
+    /* Check if memory allocation for the new node failed */
     if (!newNode)
         return NULL;
 
-    // Initialize the new node with the given number
+    /* Initialize the new node with the given number */
     newNode->n = number;
     newNode->next = NULL;
 
-    // If the list is empty or the new node should be inserted at the beginning
+    /* If the list is empty or the new node should be inserted at the beginning */
     if (current == NULL || current->n >= number)
     {
         newNode->next = current;
@@ -30,13 +30,13 @@ listint_t *insert_node(listint_t **head, int number)
         return newNode;
     }
 
-    // Traverse the list to find the correct position to insert the new node
+    /* Traverse the list to find the correct position to insert the new node */
     while (current->next && current->next->n < number)
     {
         current = current->next;
     }
 
-    // Insert the new node into the list
+    /* Insert the new node into the list */
     newNode->next = current->next;
     current->next = newNode;
 
