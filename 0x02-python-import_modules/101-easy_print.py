@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-exec("import builtins\nbuiltins.print('#pythoniscool')")
-
+exec("".join(["print('#pythoniscool')", "\n"]))
