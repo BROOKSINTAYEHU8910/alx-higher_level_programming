@@ -5,3 +5,7 @@ s = Square(13)
 
 print(s)
 print(s.area())
+~
+~
+~
+
